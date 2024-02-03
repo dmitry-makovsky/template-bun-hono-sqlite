@@ -1,9 +1,11 @@
-import { Hono } from 'hono'
+import { serve } from 'bun'
+import { init as serverInit } from './server'
 
-const app = new Hono()
+const instance = serverInit()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
+const served = serve({
+  port: 3000,
+  fetch: instance.fetch,
 })
 
-export default app
+console.log(`Server is running at http://${served.hostname}:${served.port}`)
