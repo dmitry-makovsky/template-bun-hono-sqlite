@@ -128,3 +128,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Share .vscode settings, but exclude other files and folders
+.vscode/**/*
+!.vscode/settings.json
