@@ -9,6 +9,7 @@
     "hono": "^3.12.8"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.5.3",
     "@types/bun": "latest"
   },
   "peerDependencies": {
